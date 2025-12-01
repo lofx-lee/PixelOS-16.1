@@ -106,3 +106,26 @@ Failed to compile cildb: -1
 fix:  
 device\qcom\sepolicy_vndr\sm8550\generic\vendor\common/genfs_contexts  
 line66: # genfscon proc /sys/kernel/firmware_config             u:object_r:vendor_proc_firmware_cfg:s0  
+
+7.  
+error: vendor/xiaomi/sm8550-common/Android.bp:15167:1: "libdlbpreg" depends on undefined module "libstagefright_foundation-v33".  
+Module "libdlbpreg" is defined in namespace "vendor/xiaomi/sm8550-common" which can read these 8 namespaces: ["vendor/xiaomi/sm8550-common" "device/xiaomi/sm8550-common" "hardware/qcom-caf/wlan" "hardware/qcom-caf/sm8550" "hardware/xiaomi" "vendor/qcom/opensource/commonsys-intf/display" "vendor/qcom/opensource/dataservices" "."]  
+Module "libstagefright_foundation-v33" can be found in these namespaces: ["hardware/lineage/compat"]  
+Or did you mean ["libstagefright_foundation"]?
+
+-----------------------------------------------------------------------------------------------------------------------  
+
+fix:  
+fix:  
+soong_namespace {  
+    imports: [   
+        "hardware/lineage/compat",  
+    ],  
+} 
+
+
+
+
+
+
+
