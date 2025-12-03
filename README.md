@@ -127,8 +127,9 @@ soong_namespace {
 8.  
 Revert "SystemUI: Introduce network speed indicator on statusbar"
 base: Squash import NetworkTraffic
-Revert "[SB] Remove SignalCallback#setCallIndicator & associated methods."  
+Revert "[SB] Remove SignalCallback#setCallIndicator & associated methods."
 line 29 add
+frameworks\base\packages\SystemUI\src\com\android\systemui\statusbar\phone\StatusBarSignalPolicy.java
 import com.android.settingslib.mobile.TelephonyIcons;
 
 
